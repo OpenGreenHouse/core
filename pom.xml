@@ -10,6 +10,7 @@
 
     <properties>
         <spring.boot.version>2.1.9.RELEASE</spring.boot.version>
+        <elastic.version>7.4.0</elastic.version>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
@@ -23,6 +24,23 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-json</artifactId>
             <version>${spring.boot.version}</version>
+        </dependency>
+        <!-- Elastic Client -->
+        <!-- Elastic Client -->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>${elastic.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+            <version>${elastic.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>${elastic.version}</version>
         </dependency>
     </dependencies>
 
