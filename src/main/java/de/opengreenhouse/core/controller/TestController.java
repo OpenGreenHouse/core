@@ -15,7 +15,7 @@ public class TestController {
     @Autowired
     private ElasticSendDemo elasticSendDemo;
 
-    @RequestMapping(method = RequestMethod.GET, path = "/", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @RequestMapping(method = RequestMethod.GET, path = "/test", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String test() {
         return "Hello World";
     }

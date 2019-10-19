@@ -10,6 +10,7 @@
 
     <properties>
         <spring.boot.version>2.1.9.RELEASE</spring.boot.version>
+        <spring.boot.admin.version>2.1.6</spring.boot.admin.version>
         <elastic.version>7.4.0</elastic.version>
         <java.version>1.8</java.version>
     </properties>
@@ -25,7 +26,21 @@
             <artifactId>spring-boot-starter-json</artifactId>
             <version>${spring.boot.version}</version>
         </dependency>
-        <!-- Elastic Client -->
+        <!-- Spring boot admin -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <version>${spring.boot.admin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>${spring.boot.admin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jolokia</groupId>
+            <artifactId>jolokia-core</artifactId>
+        </dependency>
         <!-- Elastic Client -->
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
@@ -59,6 +74,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>build-info</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
